@@ -1,0 +1,1 @@
+export const BASE_URL = "https://alzaf-frontend-2025.vercel.app/api";
