@@ -45,7 +45,7 @@ const Banners = ({ banners }: { banners: Banner[] }) => {
                 
                 <div className="absolute inset-1 flex items-end">
                   <div className="w-full pl-10">
-                    <div className="   px-6 py-10 text-white max-w-xl">
+                    <div className="px-6 py-10 text-white max-w-xl">
                       <p className="mb-4">{banner.description}</p>
 
                       <Link

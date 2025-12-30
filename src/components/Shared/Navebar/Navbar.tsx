@@ -11,7 +11,7 @@ const Navbar = async () => {
   return (
     <header className="w-full h-[80px] fixed top-0 z-50 bg-[#F5F5F5]">
       <nav className="container mx-auto   flex justify-between items-center h-full">
-        <h1 className="text-2xl font-bold">Alzaf</h1>
+        <Link href='/'><h1 className="text-2xl font-bold">Alzaf</h1></Link>
 
         <ul className="hidden md:flex gap-6">
           {result?.map((cat: any) => (
