@@ -73,7 +73,7 @@ const Products = ({ products, pagination, currentPage }: ProductsProps) => {
             </div>
 
             <div className=" ">
-              <Link href={`/product`}>
+              <Link href={`/products/${product.id}`}>
                 <Button className="w-full">View Details</Button>
               </Link>
             </div>
