@@ -1,8 +1,9 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ["alzaf-frontend-2025.vercel.app"],
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
-};
+module.exports = nextConfig
 
-export default nextConfig;
