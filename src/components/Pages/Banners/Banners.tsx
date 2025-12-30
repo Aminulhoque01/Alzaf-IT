@@ -49,7 +49,7 @@ const Banners = ({ banners }: { banners: Banner[] }) => {
                       <p className="mb-4">{banner.description}</p>
 
                       <Link
-                        href={banner.link}
+                        href={`${banner.link}`}
                         className="inline-block bg-white text-black px-6 py-3 rounded-md font-medium"
                       >
                         {banner.buttonText}
@@ -62,7 +62,7 @@ const Banners = ({ banners }: { banners: Banner[] }) => {
           ))}
         </CarouselContent>
 
-        {/* Navigation */}
+         
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>

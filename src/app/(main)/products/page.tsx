@@ -1,24 +1,20 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Products from "@/components/Pages/Products/products";
 import getProducts from "@/Data/products";
+ 
 
-
-const ProductsPage = async ({ searchParams }:any) => {
-  const currentPage = Number(searchParams?.page) || 1;
-
-  const res = await getProducts(currentPage);
-  const products = res?.data?.products || [];
-  const pagination = res?.data?.pagination;
-   
+const ProductsSection = async () => {
+  const res = await getProducts(1, 8);  
 
   return (
-    <Products 
-      products={products}
-      pagination={pagination}
-      currentPage={currentPage}
+    <Products
+      products={res.data.products}
+      pagination={res.data.pagination}
+      currentPage={1}
     />
   );
 };
 
+export default ProductsSection;
 
-export default ProductsPage
+
+

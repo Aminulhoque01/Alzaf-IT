@@ -18,7 +18,7 @@ const Navbar = async () => {
              
              <li key={cat.id}>
               <Link
-                href={`/${cat.slug ?? cat.id}`}
+                href={`/category/${cat.slug ?? cat.id}`}
                 className="cursor-pointer font-medium hover:text-blue-600 transition"
               >
                 {cat.name}
