@@ -7,18 +7,19 @@ import { FaStar } from "react-icons/fa6";
 
 type ProductsProps = {
   products: any[];
-  pagination: any;
+  pagination: {
+    totalPages: number;
+    NextPage: boolean;
+    PrevPage: boolean;
+  };
   currentPage: number;
-  category?: string;
+  category?: string; // ✅ ADD THIS
 };
 
-
-const Products = ({
-  products,
+const Products = ({ products,
   pagination,
   currentPage,
-  category,
-}: ProductsProps)  => {
+  category, }: ProductsProps) => {
   const totalPages = pagination?.totalPages || 1;
 
   const getPages = () => {
@@ -31,7 +32,7 @@ const Products = ({
 
   return (
     <section className="container mx-auto  py-10">
-      <h2 className="text-2xl font-semibold mb-6 text-center mt-10">All Products</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center  ">All Products</h2>
 
        
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -115,6 +116,9 @@ const Products = ({
             Next
           </Link>
         )}
+      </div>
+      <div className="text-center pt-5">
+        <Link href="/all-products"><Button  >All Products</Button></Link>
       </div>
     </section>
   );

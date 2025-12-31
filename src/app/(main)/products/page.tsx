@@ -1,9 +1,15 @@
 import Products from "@/components/Pages/Products/products";
 import getProducts from "@/Data/products";
- 
 
-const ProductsSection = async () => {
-  const res = await getProducts(1, 8);  
+const ProductsPage = async () => {
+  const res = await getProducts({
+    page: 1,
+    limit: 10,
+    search: "",
+    minPrice: 100,
+    maxPrice: 2000,
+    sort: "price-asc",
+  });
 
   return (
     <Products
@@ -14,7 +20,7 @@ const ProductsSection = async () => {
   );
 };
 
-export default ProductsSection;
 
+export default ProductsPage;
 
 

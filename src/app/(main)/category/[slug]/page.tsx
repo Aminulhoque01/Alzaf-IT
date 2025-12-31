@@ -18,7 +18,7 @@ interface CategoryPageProps {
 const CategoryPage = async ({ params }: CategoryPageProps) => {
   const { slug } = await params; // unwrap async params
 
-  const allProducts = await getProducts();
+  const allProducts = await getProducts({});
 
   const products = allProducts?.data?.products?.filter(
     (p: any) => p.categorySlug?.trim().toLowerCase() === slug?.trim().toLowerCase()
